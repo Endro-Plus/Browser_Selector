@@ -4,7 +4,7 @@ CREATE TABLE browsers (
     browser_ID INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
     browser_name varchar(25) UNIQUE,
     browser_icon varchar(500) UNIQUE,
-    browser_exe varchar(500) UNIQUE,
+    browser_exe varchar(500),
     relative INTEGER NOT NULL
 
 );
@@ -44,7 +44,7 @@ INSERT INTO browsers
 
 --Goggles
 INSERT INTO browsers 
-    VALUES (7, "Chome", "..\IMG\Gogle.jpg", null, 1);
+    VALUES (7, "Chrome", "..\IMG\Gogle.jpg", null, 1);
 
 --Chrome...ium
 INSERT INTO browsers 

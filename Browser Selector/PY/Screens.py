@@ -32,7 +32,7 @@ def mainscreen():
 def browser_select(f, x, y):
     #add the top bar
     window.title("Browser Select")
-    print(x, y)
+    #print(x, y)
     window.overrideredirect(False) 
     clear_frame(f)
     frame = tk.Frame(window, bg=bgcolor)
@@ -47,6 +47,6 @@ def browser_select(f, x, y):
     fp.pack()
     tk.Button(frame, text="Open Files", command=lambda: browsefunc(fp)).pack()
     tk.Frame(frame, height=60, width=30, bg=bgcolor).pack()#some space
-    tk.Button(frame, text="Enter", command=lambda:verify_browser(browser_box.get(), fp.get())).pack()
+    tk.Button(frame, text="Enter", command=lambda:verify_browser(browser_box.get(), fp.get(), [x, y])).pack()
 
     
