@@ -50,9 +50,9 @@ INSERT INTO browsers
 INSERT INTO browsers 
     VALUES (8, "Chromium", "..\IMG\Chromium.jpg", null, 1);
 
---Libre Offi- I meant Librefox
+--Librefo- I meant Librewolf!
 INSERT INTO browsers 
-    VALUES (9, "Librefox", "..\IMG\Librefox.jpg", null, 1);
+    VALUES (9, "Librewolf", "..\IMG\Librefox.jpg", null, 1);
 
 --"Where she walks, seedlings awaken and reach out to the sun's warmth." -Hadori, the Promise of Spring
 INSERT INTO browsers 
