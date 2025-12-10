@@ -33,8 +33,13 @@ def mainscreen(f = None):
                 pos+="e"
             if([x, y] in shortcut):
                 #find the image of the button
-                img = IMG_PATH + "Waterfox.png" #f"{REL_PATH}\\{beautify(get_image(x, y))[0]}"
-                btn.append(tk.Button(frame, fg="grey", padx=20, pady=20, width=80, height=75, borderwidth=0, font="12px", image=img))
+                imgpath = f"{REL_PATH}\\{beautify(get_image(x, y))[0]}"
+                img = tk.PhotoImage(file = imgpath)
+                img = img.subsample(3, 3)
+                print(1)
+                
+                #create the button
+                btn.append(tk.Button(frame, fg="grey", padx=20, pady=20, width=80, height=75, borderwidth=0, font="12px", image=img, command = lambda imgpath=imgpath : open_browser(imgpath)))
                 btn[len(btn)-1].image = img
                 btn[len(btn)-1].place(relx = x/2, rely = y/2, anchor=pos)
 

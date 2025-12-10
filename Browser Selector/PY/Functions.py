@@ -1,5 +1,6 @@
 from Variables import *
 import sqlite3
+from time import sleep
 def close(window):
     window.destroy()
 
@@ -34,15 +35,26 @@ def verify_browser(icon, path, pos, ms, f):
             browsID = int(cur.fetchall()[0][0])
             #update bpos
             cur.execute(f"INSERT INTO bpos VALUES ({pos[0]}, {pos[1]}, {browsID})")
-            msg.showinfo(title="Complete!", message="Shortcut saved!")
-
-            #go back to the mainscreen
-            ms(f)
+            
         
+        msg.showinfo(title="Complete!", message="Shortcut saved!")
 
+        #go back to the mainscreen
+        ms(f)
     else:
         msg.showerror(message="That file path couldn't be found!", title="File not found!")
         return
+    
+def open_browser(img):
+    img = img[len(str(REL_PATH))+1:]
+    with sqlite3.connect(DB_PATH) as conn:
+        cur = conn.cursor()
+        cur.execute(f"SELECT browser_exe FROM bpos LEFT JOIN browsers ON bpos.browser_ID = browsers.browser_ID WHERE browser_icon = \"{img}\";")
+        #end the program
+        close(window)
+        #run the exe
+        os.startfile(beautify(cur.fetchall())[0])
+        
 
 def get_bpos():
     #get all the coordinates in bpos
