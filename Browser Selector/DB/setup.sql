@@ -20,63 +20,63 @@ CREATE TABLE bpos(
 );
 --You are filled with BRAVERY
 INSERT INTO browsers 
-    VALUES (1, "Brave", "..\IMG\Brave.jpg", null, 1);
+    VALUES (1, "Brave", "..\IMG\Brave.png", null, 1);
 
 --Look, It's Da Dawg Guys!
 INSERT INTO browsers 
-    VALUES (2, "DuckDuckGo", "..\IMG\DDG.jpg", null, 1);
+    VALUES (2, "DuckDuckGo", "..\IMG\DDG.png", null, 1);
 
 --Epic ga- I meant Epic privacy!
 INSERT INTO browsers 
-    VALUES (3, "Epic Privacy", "..\IMG\EPIC.jpg", null, 1);
+    VALUES (3, "Epic Privacy", "..\IMG\EPIC.png", null, 1);
 
 --CAPTAIN FALKON!
 INSERT INTO browsers 
-    VALUES (4, "Falkon", "..\IMG\Falko.jpg", null, 1);
+    VALUES (4, "Falkon", "..\IMG\Falko.png", null, 1);
 
 -- Fox's up-B
 INSERT INTO browsers 
-    VALUES (5, "Firefox", "..\IMG\Firefox.jpg", null, 1);
+    VALUES (5, "Firefox", "..\IMG\Firefox.png", null, 1);
 
 --Literal crap
 INSERT INTO browsers 
-    VALUES (6, "Edge", "..\IMG\Garbage.jpg", null, 1);
+    VALUES (6, "Edge", "..\IMG\Garbage.png", null, 1);
 
 --Goggles
 INSERT INTO browsers 
-    VALUES (7, "Chrome", "..\IMG\Gogle.jpg", null, 1);
+    VALUES (7, "Chrome", "..\IMG\Gogle.png", null, 1);
 
 --Chrome...ium
 INSERT INTO browsers 
-    VALUES (8, "Chromium", "..\IMG\Chromium.jpg", null, 1);
+    VALUES (8, "Chromium", "..\IMG\Chromium.png", null, 1);
 
 --Librefo- I meant Librewolf!
 INSERT INTO browsers 
-    VALUES (9, "Librewolf", "..\IMG\Librefox.jpg", null, 1);
+    VALUES (9, "Librewolf", "..\IMG\Librefox.png", null, 1);
 
 --"Where she walks, seedlings awaken and reach out to the sun's warmth." -Hadori, the Promise of Spring
 INSERT INTO browsers 
-    VALUES (10, "Midori", "..\IMG\Midori.jpg", null, 1);
+    VALUES (10, "Midori", "..\IMG\Midori.png", null, 1);
 
 --The Opera
 INSERT INTO browsers 
-    VALUES (11, "Opera", "..\IMG\Opera.jpg", null, 1);
+    VALUES (11, "Opera", "..\IMG\Opera.png", null, 1);
 
 --The Opera, GTX on
 INSERT INTO browsers 
-    VALUES (12, "OperaGX", "..\IMG\OperaGX.jpg", null, 1);
+    VALUES (12, "OperaGX", "..\IMG\OperaGX.png", null, 1);
 
 --Torarria
 INSERT INTO browsers 
-    VALUES (13, "Tor Browser", "..\IMG\Tor_logo.jpg", null, 1);
+    VALUES (13, "Tor Browser", "..\IMG\Tor_logo.png", null, 1);
 
 --Vivivivivivivivivivalaldi
 INSERT INTO browsers 
-    VALUES (14, "Vivaldi", "..\IMG\Vivsomething.jpg", null, 1);
+    VALUES (14, "Vivaldi", "..\IMG\Vivsomething.png", null, 1);
 
 --H2OFox
 INSERT INTO browsers 
-    VALUES (15, "Waterfox", "..\IMG\Waterfox.jpg", null, 1);
+    VALUES (15, "Waterfox", "..\IMG\Waterfox.png", null, 1);
 
 
 

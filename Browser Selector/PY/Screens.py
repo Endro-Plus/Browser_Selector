@@ -2,12 +2,18 @@
 from Variables import *
 from Functions import *
 
-def mainscreen():
-    #remove the top bar
+def mainscreen(f = None):
+    #delete previous frame if it exists
+    if(f != None):
+        clear_frame(f)
     window.overrideredirect(True) 
     #create the frame to limit button spread
     frame = tk.Frame(window, bg=bgcolor, width= framesize, height= framesize)
     frame.pack(expand=True)
+    #getting the positions of the shortcuts
+    shortcut = get_bpos()
+    btn = []
+    btnimg = get_images()
     #adding the 9 buttons
     for x in range(0, 3):
         for y in range(0, 3):
@@ -25,8 +31,15 @@ def mainscreen():
                 pos+="w"
             elif (x > 1):
                 pos+="e"
-            
-            tk.Button(frame, text = "+", bg=btncolor, command = lambda x=x, y=y: browser_select(frame, x, y), fg="grey", padx=20, pady=20, borderwidth=0, font="12px").place(relx = x/2, rely = y/2, anchor=pos)
+            if([x, y] in shortcut):
+                #find the image of the button
+                img = IMG_PATH + "Waterfox.png" #f"{REL_PATH}\\{beautify(get_image(x, y))[0]}"
+                btn.append(tk.Button(frame, fg="grey", padx=20, pady=20, width=80, height=75, borderwidth=0, font="12px", image=img))
+                btn[len(btn)-1].image = img
+                btn[len(btn)-1].place(relx = x/2, rely = y/2, anchor=pos)
+
+            else:
+                tk.Button(frame, text = "+", bg=btncolor, command = lambda x=x, y=y: browser_select(frame, x, y), fg="grey", padx=20, pady=20, borderwidth=0, font="12px").place(relx = x/2, rely = y/2, anchor=pos)
 
 
 def browser_select(f, x, y):
@@ -47,6 +60,7 @@ def browser_select(f, x, y):
     fp.pack()
     tk.Button(frame, text="Open Files", command=lambda: browsefunc(fp)).pack()
     tk.Frame(frame, height=60, width=30, bg=bgcolor).pack()#some space
-    tk.Button(frame, text="Enter", command=lambda:verify_browser(browser_box.get(), fp.get(), [x, y])).pack()
+    tk.Button(frame, text="Enter", command=lambda:verify_browser(browser_box.get(), fp.get(), [x, y], mainscreen, frame)).pack()
+    
 
     
